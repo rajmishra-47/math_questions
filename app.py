@@ -7,7 +7,7 @@ app = Flask(__name__)
 with open('data.json', 'r') as f:
     questions_data = json.load(f)
 
-@app.route('/questions', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_questions():
     return jsonify(questions_data)
 
